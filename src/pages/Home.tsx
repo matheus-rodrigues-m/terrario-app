@@ -2,11 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Star, MapPin, Clock, CalendarCheck } from 'lucide-react'
 import Badges from '../components/Badges'
-import { Img, Carousel, Sheet } from '../components/ui'
+import { Img, Carousel } from '../components/ui'
 import { MENU, } from '../data/menu'
 import { SPACES, REVIEWS } from '../data/spaces'
 import { INFO } from '../data/info'
-import { brl } from '../lib/whatsapp'
 import DishSheet from '../components/DishSheet'
 import DishCard from '../components/DishCard'
 
@@ -57,7 +56,7 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="mt-10">
+      {REVIEWS.length > 0 && <section className="mt-10">
         <h2 className="h2 mb-4 px-4">Quem já esteve aqui</h2>
         <Carousel>
           {REVIEWS.map((r, i) => (
@@ -68,7 +67,7 @@ export default function Home() {
             </blockquote>
           ))}
         </Carousel>
-      </section>
+      </section>}
 
       <footer className="mx-4 mt-10 rounded-3xl bg-basalt p-5 text-ivory">
         <img src="/img/logo-completa.png" alt="Terrário Restaurante" className="mx-auto h-24 w-auto rounded-xl" />

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Shell from './components/Shell'
 import HomePage from './pages/Home'
 import Cardapio from './pages/Cardapio'
@@ -13,7 +13,7 @@ export default function App() {
         <Route path="cardapio" element={<Cardapio />} />
         <Route path="o-restaurante" element={<Restaurante />} />
         <Route path="reservas" element={<Reservas />} />
-        <Route path="*" element={<HomePage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   )

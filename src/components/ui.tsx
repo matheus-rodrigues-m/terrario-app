@@ -8,9 +8,11 @@ export const FrameCtx = createContext<HTMLElement | null>(null)
 export function Img({ src, alt, className = '', pos = 'center' }: any) {
   const [failed, setFailed] = useState(false)
   const [loaded, setLoaded] = useState(false)
+  const [prev, setPrev] = useState(src)
+  if (prev !== src) { setPrev(src); setFailed(false); setLoaded(false) }
   const show = src && !failed
   return (
-    <div className={`relative overflow-hidden bg-muted ${className}`}>
+    <span className={`relative block overflow-hidden bg-muted ${className}`}>
       {show ? (
         <img src={src} alt={alt} loading="lazy" onLoad={() => setLoaded(true)} onError={() => setFailed(true)}
           style={{ objectPosition: pos }}
@@ -18,7 +20,7 @@ export function Img({ src, alt, className = '', pos = 'center' }: any) {
       ) : (
         <img src="/img/logo.png" alt="" className="absolute inset-0 m-auto h-1/2 w-1/2 object-contain opacity-40" />
       )}
-    </div>
+    </span>
   )
 }
 

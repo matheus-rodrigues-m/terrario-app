@@ -27,7 +27,7 @@ export default function DishSheet({ dish, onClose }: any) {
               </div>
             )}
             {d.desc && <p className="text-[15px] leading-relaxed text-ink">{d.desc}</p>}
-            <Link to="/reservas" className="btn btn-primary tap w-full"><CalendarCheck size={20} strokeWidth={1.5} />Reservar mesa</Link>
+            <Link to="/reservas" onClick={onClose} className="btn btn-primary tap w-full"><CalendarCheck size={20} strokeWidth={1.5} />Reservar mesa</Link>
           </div>
         </div>
       )}

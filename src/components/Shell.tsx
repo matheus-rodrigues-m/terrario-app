@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { NavLink, Link, useLocation, useOutlet } from 'react-router-dom'
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 import { Home, UtensilsCrossed, Trees, CalendarCheck, MessageCircle } from 'lucide-react'
 import { FrameCtx } from './ui'
 import { waLink } from '../lib/whatsapp'
@@ -11,18 +11,34 @@ const NAV = [
   { to: '/o-restaurante', label: 'O Espaço', icon: Trees },
 ]
 
+const TITLES: Record<string, string> = {
+  '/': 'Terrário Restaurante',
+  '/cardapio': 'Cardápio · Terrário',
+  '/o-restaurante': 'O espaço · Terrário',
+  '/reservas': 'Reservar mesa · Terrário',
+}
+
+// Congela o <Outlet/> de cada rota: sem isso, a página que está saindo já passa a mostrar
+// o conteúdo da nova rota durante o fade-out.
+function FrozenOutlet() {
+  const outlet = useOutlet()
+  const [frozen] = useState(outlet)
+  return frozen
+}
+
 export default function Shell() {
   const [frame, setFrame] = useState<HTMLElement | null>(null)
   const scroller = useRef<HTMLElement>(null)
   const { pathname } = useLocation()
   const booking = pathname.startsWith('/reservas')
-  useEffect(() => { scroller.current?.scrollTo(0, 0) }, [pathname])
+  useEffect(() => { document.title = TITLES[pathname] ?? TITLES['/'] }, [pathname])
 
   return (
     <div className="flex h-full w-full items-center justify-center bg-muted md:p-6">
       <div ref={setFrame}
         className="relative flex h-full w-full flex-col overflow-hidden bg-sand md:h-[min(860px,100%)] md:w-[410px] md:rounded-[44px] md:border-[10px] md:border-basalt md:shadow-[0_30px_80px_-20px_rgba(18,26,21,0.45)]">
         <FrameCtx.Provider value={frame}>
+          <MotionConfig reducedMotion="user">
           {!booking && (
             <header className="z-30 flex shrink-0 items-center justify-between border-b border-line/70 bg-sand/90 px-4 pt-[env(safe-area-inset-top)] backdrop-blur-md">
               <Link to="/" className="flex h-14 items-center" aria-label="Terrário — início">
@@ -36,9 +52,9 @@ export default function Shell() {
             </header>
           )}
           <main id="scroller" ref={scroller} className="no-scrollbar relative flex-1 overflow-y-auto overscroll-contain">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" onExitComplete={() => scroller.current?.scrollTo(0, 0)}>
               <motion.div key={pathname} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }} className="min-h-full">
-                <Outlet />
+                <FrozenOutlet />
               </motion.div>
             </AnimatePresence>
           </main>
@@ -61,6 +77,7 @@ export default function Shell() {
               </ul>
             </nav>
           )}
+          </MotionConfig>
         </FrameCtx.Provider>
       </div>
     </div>

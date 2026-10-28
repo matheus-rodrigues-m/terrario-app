@@ -79,6 +79,7 @@ Para encerrar o servidor, use `Ctrl+C`.
 | `npm run dev` | Inicia o servidor de desenvolvimento do Vite. |
 | `npm run build` | Gera a versão otimizada para produção na pasta `dist/`. |
 | `npm run preview` | Serve localmente o build já gerado para conferência. Execute `npm run build` antes. |
+| `npm run typecheck` | Verifica os tipos TypeScript sem gerar arquivos. |
 
 ## Estrutura do projeto
 
@@ -115,7 +116,11 @@ As informações operacionais ficam em [`src/data/info.ts`](src/data/info.ts). A
 
 - `whatsapp`: número com código do país e DDD, somente dígitos, no formato usado por `wa.me` (por exemplo, `55` + DDD + número).
 - `address`: endereço completo que será exibido no rodapé da página inicial.
-- `hours`: dias e horários de atendimento.
+- `hours`: dias e horários de atendimento exibidos no rodapé.
+- `OPEN_SHIFTS`: turnos (Almoço/Jantar) em que o formulário aceita reservas em cada dia da semana (0 = domingo … 6 = sábado). Mantenha coerente com `hours`; segunda-feira está como fechada.
+- `TIMES`: horários oferecidos em cada turno.
+
+Os depoimentos ficam em `REVIEWS` ([`src/data/spaces.ts`](src/data/spaces.ts)). A seção "Quem já esteve aqui" só aparece quando houver depoimentos **reais** cadastrados.
 
 Também vale revisar os itens, preços, descrições e imagens em [`src/data/menu.ts`](src/data/menu.ts), assim como os ambientes, selos e avaliações em [`src/data/spaces.ts`](src/data/spaces.ts).
 
@@ -133,4 +138,6 @@ O conteúdo pronto para publicação será criado em `dist/`. Para conferir esse
 npm run preview
 ```
 
-O projeto é uma aplicação frontend servida como arquivos estáticos e não possui backend próprio. A solicitação de reserva depende do WhatsApp. O manifesto web está configurado em `public/manifest.webmanifest`; **não há service worker configurado**, portanto o projeto não oferece funcionamento offline por cache.
+O projeto é uma aplicação frontend servida como arquivos estáticos e não possui backend próprio. Como usa `BrowserRouter`, o servidor precisa devolver `index.html` para qualquer rota (`/cardapio`, `/reservas`…), senão abrir um link direto resulta em 404. Em Netlify e Cloudflare Pages isso já está resolvido pelo arquivo `public/_redirects`; em outras hospedagens configure o fallback equivalente (GitHub Pages não suporta isso de forma nativa).
+
+A solicitação de reserva depende do WhatsApp. O manifesto web está configurado em `public/manifest.webmanifest`; **não há service worker configurado**, portanto o projeto não oferece funcionamento offline por cache.
