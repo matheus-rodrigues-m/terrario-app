@@ -90,15 +90,15 @@ export const CATEGORIES = [
  },
  {
   "id": "vodkas",
-  "label": "Vodkas"
+  "label": "Vodkas (dose)"
  },
  {
   "id": "gin",
-  "label": "Gin"
+  "label": "Gin (dose)"
  },
  {
   "id": "whisky",
-  "label": "Whisky"
+  "label": "Whisky (dose)"
  },
  {
   "id": "garrafas",
@@ -232,7 +232,7 @@ export const MENU = [
   "id": "entradas-10",
   "cat": "entradas",
   "name": "Carne de sol angus com manteiga de ervas e batata frita",
-  "desc": "Carne de sol com manteiga de ervas,limão siciliano acompanhado com batatas fritas,vinagre de maça e farofa da casa!",
+  "desc": "Carne de sol com manteiga de ervas, limão siciliano acompanhado com batatas fritas, vinagre de maça e farofa da casa!",
   "price": 99.0,
   "img": "/img/menu/entradas-10.jpg",
   "tags": []
@@ -333,7 +333,7 @@ export const MENU = [
   "id": "entradas-frios-21",
   "cat": "entradas-frios",
   "name": "Tartar de salmão tropical",
-  "desc": "Tartar de salmão servido a fresca, com mix de pimentões, cream cheese, geleia biquinho e cubos de abacate temperado, acompanhado com Chips de batata doce e molho de frutas…",
+  "desc": "Tartar de salmão servido a fresca, com mix de pimentões, cream cheese, geleia biquinho e cubos de abacate temperado, acompanhado com Chips de batata doce e molho de frutas.",
   "price": 92.0,
   "img": "/img/menu/entradas-frios-21.jpg",
   "tags": []
@@ -369,7 +369,7 @@ export const MENU = [
   "id": "porcoes-especi-25",
   "cat": "porcoes-especiais-da-casa",
   "name": "Salmão grelhado com salada",
-  "desc": "Filé de salmão grelhado ao molho de limão siciliano e queijo,acompanhada de salada mediterranea",
+  "desc": "Filé de salmão grelhado ao molho de limão siciliano e queijo, acompanhada de salada mediterranea",
   "price": 148.0,
   "img": "/img/menu/porcoes-especi-25.jpg",
   "tags": []
@@ -504,7 +504,7 @@ export const MENU = [
   "id": "massas-e-risot-40",
   "cat": "massas-e-risotos",
   "name": "Fettuccine com Bife de Chorizo e Fonduta de Gorgonzola",
-  "desc": "Suculento bife de chorizo grelhado ao ponto, servido sobre fettuccine envolto em uma cremosa fonduta de gorgonzola. Um prato intenso e sofisticado, que combina a maciez da carne…",
+  "desc": "Suculento bife de chorizo grelhado ao ponto, servido sobre fettuccine envolto em uma cremosa fonduta de gorgonzola. Um prato intenso e sofisticado.",
   "price": 89.0,
   "img": "/img/menu/massas-e-risot-40.jpg",
   "tags": []
@@ -522,7 +522,7 @@ export const MENU = [
   "id": "saladas-42",
   "cat": "saladas",
   "name": "Salada Terrário",
-  "desc": "Mix de folhas, tomate seco,palmito, lascas de manga, uva, redução de vinagre balsamico",
+  "desc": "Mix de folhas, tomate seco, palmito, lascas de manga, uva, redução de vinagre balsamico",
   "price": 54.0,
   "img": "/img/menu/saladas-42.jpg",
   "tags": []
@@ -530,8 +530,8 @@ export const MENU = [
  {
   "id": "saladas-43",
   "cat": "saladas",
-  "name": "Legumes Salté",
-  "desc": "Salada de abóbora,cenoura,batata e cebola baby,tomate cereja e brócolis salteados!",
+  "name": "Legumes Sauté",
+  "desc": "Salada de abóbora, cenoura, batata e cebola baby, tomate cereja e brócolis salteados!",
   "price": 32.5,
   "img": "/img/menu/saladas-43.jpg",
   "tags": [
@@ -569,7 +569,7 @@ export const MENU = [
   "id": "refeicoes-fami-47",
   "cat": "refeicoes-familia",
   "name": "Sabor de Casa",
-  "desc": "“Uma experiência completa para compartilhar. são 700g de Bife de Chorizo Angus serenado no ponto, acompanhados de arroz soltinho com alho, feijão bem temperado em caldo cheio de…",
+  "desc": "Uma experiência completa para compartilhar. São 700g de Bife de Chorizo Angus serenado no ponto, acompanhados de arroz soltinho com alho.",
   "price": 198.0,
   "img": "/img/menu/refeicoes-fami-47.jpg",
   "tags": []
@@ -622,8 +622,8 @@ export const MENU = [
  {
   "id": "acompanhamento-53",
   "cat": "acompanhamentos",
-  "name": "Legumes Sautêe",
-  "desc": "Salada de Legumes Salté",
+  "name": "Legumes Sauté",
+  "desc": "Abóbora, cenoura, batata, cebola baby, tomate cereja e brócolis salteados.",
   "price": 32.5,
   "img": "/img/menu/acompanhamento-53.jpg",
   "tags": [
@@ -663,7 +663,7 @@ export const MENU = [
   "id": "kids-57",
   "cat": "kids",
   "name": "Hambúrguer",
-  "desc": "Pão, carne, salada,molho da casa,queijo e fritas",
+  "desc": "Pão, carne, salada, molho da casa, queijo e fritas",
   "price": 32.5,
   "img": "/img/menu/kids-57.jpg",
   "tags": [
@@ -889,7 +889,7 @@ export const MENU = [
   "id": "bebidas-sem-al-81",
   "cat": "bebidas-sem-alcool-drinks",
   "name": "Terrário encantado",
-  "desc": "Xarope de morango,suco de laranja, sprite, bala fini.",
+  "desc": "Xarope de morango, suco de laranja, sprite, bala fini.",
   "price": 29.0,
   "img": "/img/menu/bebidas-sem-al-81.jpg",
   "tags": []
@@ -1258,7 +1258,7 @@ export const MENU = [
   "id": "drinks-122",
   "cat": "drinks",
   "name": "American Space",
-  "desc": "- Jack Daniel, xarope space, Whisky fire, limão siciliano, suco de maracujá,canela",
+  "desc": "- Jack Daniel, xarope space, Whisky fire, limão siciliano, suco de maracujá, canela",
   "price": 42.0,
   "img": "/img/menu/drinks-122.jpg",
   "tags": []
@@ -1312,7 +1312,7 @@ export const MENU = [
   "id": "drinks-128",
   "cat": "drinks",
   "name": "Aperol Spritz",
-  "desc": "Aperol,suco de laranja,espumante",
+  "desc": "Aperol, suco de laranja, espumante",
   "price": 36.0,
   "img": "/img/menu/drinks-128.jpg",
   "tags": []
@@ -1357,7 +1357,7 @@ export const MENU = [
   "id": "drinks-133",
   "cat": "drinks",
   "name": "Sex on the beach",
-  "desc": "Vodka,suco de laranja, triple sec pessego e monin grenadine",
+  "desc": "Vodka, suco de laranja, triple sec pessego e monin grenadine",
   "price": 35.0,
   "img": "/img/menu/drinks-133.jpg",
   "tags": []
@@ -1366,7 +1366,7 @@ export const MENU = [
   "id": "drinks-134",
   "cat": "drinks",
   "name": "3 andares (Shot)",
-  "desc": "Suco de laranja,vodka e curaçau",
+  "desc": "Suco de laranja, vodka e curaçau",
   "price": 18.0,
   "img": "/img/menu/drinks-134.jpg",
   "tags": []
@@ -1583,7 +1583,7 @@ export const MENU = [
   "id": "espumantes-158",
   "cat": "espumantes",
   "name": "Jaume Serra Brut",
-  "desc": "O Jaume Serra Cava Brut é um espumante espanhol clássico produzido na região da Catalunha pelo método tradicional (Champenoise). Elaborado com as uvas Macabeo, Xarel-lo e…",
+  "desc": "O Jaume Serra Cava Brut é um espumante espanhol clássico produzido na região da Catalunha pelo método tradicional (Champenoise).",
   "price": 140.0,
   "img": "/img/menu/espumantes-158.jpg",
   "tags": [],
@@ -1608,16 +1608,6 @@ export const MENU = [
   "img": "/img/menu/espumantes-160.jpg",
   "tags": [],
   "country": "br"
- },
- {
-  "id": "espumantes-161",
-  "cat": "espumantes",
-  "name": "Moet Chandon",
-  "desc": "Surpreenda-se com esse maravilhoso moêt e Chandon. Harmonização: Peixes e Frutos do Mar. Carnes Brancas. Massas e Risotos.",
-  "price": 863.0,
-  "img": "/img/menu/espumantes-161.jpg",
-  "tags": [],
-  "country": "fr"
  },
  {
   "id": "espumantes-162",
@@ -1653,7 +1643,7 @@ export const MENU = [
   "id": "vinhos-brancos-165",
   "cat": "vinhos-brancos",
   "name": "Chac Chac branco",
-  "desc": "O Chac Chac Sauvignon Blanc é um vinho branco seco de origem argentina,Acidez equilibrada, refrescante e com final de boa persistência.",
+  "desc": "O Chac Chac Sauvignon Blanc é um vinho branco seco de origem argentina, Acidez equilibrada, refrescante e com final de boa persistência.",
   "price": 157.0,
   "img": "/img/menu/vinhos-brancos-165.jpg",
   "tags": [],
@@ -1723,7 +1713,7 @@ export const MENU = [
   "id": "vinhos-rose-172",
   "cat": "vinhos-rose",
   "name": "Santa alba rosé",
-  "desc": "O Vinho Santa Alba Rosé é um exemplar chileno elegante e distinto, com uma tonalidade rosada cativante. Seu paladar refrescante é perfeito para harmonizar com peixes, frutos do m…",
+  "desc": "O Vinho Santa Alba Rosé é um exemplar chileno elegante e distinto, com uma tonalidade rosada cativante. Seu paladar refrescante é perfeito para harmonizar com peixes.",
   "price": 125.0,
   "img": "/img/menu/vinhos-rose-172.jpg",
   "tags": [],
@@ -1743,7 +1733,7 @@ export const MENU = [
   "id": "vinhos-tintos-174",
   "cat": "vinhos-tintos",
   "name": "Casas del toqui merlot",
-  "desc": "Um Merlot frutado, macio e encantador, ideal para as mais diversas ocasiões e os mais diversos paladares. Harmonização ideal: Carnes vermelhas magras, massas com molhos à base de…",
+  "desc": "Um Merlot frutado, macio e encantador, ideal para as mais diversas ocasiões e os mais diversos paladares. Harmonização ideal: Carnes vermelhas magras.",
   "price": 168.9,
   "img": "/img/menu/vinhos-tintos-174.jpg",
   "tags": [],
@@ -1773,7 +1763,7 @@ export const MENU = [
   "id": "vinhos-tintos-177",
   "cat": "vinhos-tintos",
   "name": "Chac Chac Tinto",
-  "desc": "Uva :Malbec 6 meses em barricas de carvalho francês e americano. Ideal para acompanhar todo o tipo de carnes vermelhas.",
+  "desc": "Uva: Malbec 6 meses em barricas de carvalho francês e americano. Ideal para acompanhar todo o tipo de carnes vermelhas.",
   "price": 157.0,
   "img": "/img/menu/vinhos-tintos-177.jpg",
   "tags": [],
@@ -1803,7 +1793,7 @@ export const MENU = [
   "id": "vinhos-tintos-180",
   "cat": "vinhos-tintos",
   "name": "La Piu Belle",
-  "desc": "Complexo e elegante, no paladar destaca seu frescor, em acidez perfeita e equilibrada. Feito com uvas. Cabernet Franc Cabernet Sauvignon. Carménère. Envelhecimento 24 meses em barricas d…",
+  "desc": "Complexo e elegante, no paladar destaca seu frescor, em acidez perfeita e equilibrada. Feito com uvas Cabernet Franc, Cabernet Sauvignon e Carménère.",
   "price": 754.0,
   "img": "/img/menu/vinhos-tintos-180.jpg",
   "tags": [],

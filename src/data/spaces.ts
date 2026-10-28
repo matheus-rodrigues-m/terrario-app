@@ -10,8 +10,6 @@ export const BADGES = [
   { key: 'priv', label: 'Salão Privativo' },
   { key: 'wine', label: 'Adega de Vinhos' },
 ]
-export const REVIEWS = [
-  { name: 'Cliente Terrário', text: 'Ambiente lindo, atendimento atencioso e uma comida que fez a noite valer a pena.', occasion: 'Jantar a dois' },
-  { name: 'Cliente Terrário', text: 'Almoço em família sem estresse: espaço kids com monitores e tudo acessível.', occasion: 'Almoço de domingo' },
-  { name: 'Cliente Terrário', text: 'Comemoramos o aniversário no salão privativo. Cada detalhe foi cuidado.', occasion: 'Aniversário' },
-]
+// Depoimentos REAIS de clientes (com autorização). A seção "Quem já esteve aqui" só aparece se houver itens.
+// Modelo: { name: 'Maria S.', text: 'Texto do depoimento.', occasion: 'Aniversário' },
+export const REVIEWS: { name: string; text: string; occasion: string }[] = []

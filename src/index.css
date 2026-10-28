@@ -15,4 +15,5 @@ body { background: #E7E2D8; color: #182A20; font-family: 'Plus Jakarta Sans', sy
 .btn-terra { background:#A45731; color:#fff; }
 .btn-ghost { border:1px solid rgba(36,66,48,.25); color:#244230; }
 .chip { min-height:48px; padding:0 1rem; border-radius:9999px; background:rgba(231,226,216,.6); border:1px solid #DDD7CB; font-weight:500; font-size:.875rem; white-space:nowrap; }
-.chip[aria-pressed=true] { background:#244230; color:#FAF8F5; border-color:#244230; }
+.chip:disabled { opacity: .4; cursor: not-allowed; }
+.chip[aria-pressed=true], .chip[aria-current=true] { background:#244230; color:#FAF8F5; border-color:#244230; }
