@@ -10,6 +10,11 @@ export const maskPhone = (v: string) => {
   if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`
   return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`
 }
+// "2015" -> "20:15"
+export const maskTime = (v: string) => {
+  const d = v.replace(/\D/g, '').slice(0, 4)
+  return d.length <= 2 ? d : `${d.slice(0, 2)}:${d.slice(2)}`
+}
 const guests = (n: number) => n === 8 ? '8 ou mais convidados' : n === 1 ? '1 convidado' : `${n} convidados`
 export function buildMessage(r: any) {
   const [y, m, d] = r.date.split('-')
