@@ -1,0 +1,6 @@
+{
+  "name": "Terrário Restaurante", "short_name": "Terrário",
+  "start_url": "/", "display": "standalone",
+  "background_color": "#121A15", "theme_color": "#244230",
+  "icons": [{ "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" }]
+}
